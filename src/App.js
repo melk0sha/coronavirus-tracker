@@ -4,7 +4,9 @@ import Cards from "./components/Cards";
 
 const useStyles = makeStyles({
   root: {
+    display: "flex",
     backgroundColor: "#eeedf0",
+    minHeight: "100vh",
   },
 });
 

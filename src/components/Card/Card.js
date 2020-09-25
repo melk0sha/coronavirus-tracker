@@ -1,9 +1,7 @@
 import React from "react";
 import {
   Card as CardContainer,
-  CardActions,
   CardContent,
-  Button,
   Typography,
   makeStyles,
 } from "@material-ui/core";
@@ -11,14 +9,10 @@ import {
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+    maxWidth: 300,
   },
   title: {
-    fontSize: 14,
+    fontSize: 16,
   },
   pos: {
     marginBottom: 12,
@@ -27,33 +21,28 @@ const useStyles = makeStyles({
 
 const Card = () => {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <CardContainer className={classes.root}>
       <CardContent>
         <Typography
           className={classes.title}
-          color="textSecondary"
+          color="textPrimary"
           gutterBottom
+          component="h2"
         >
-          Word of the Day
+          Total Deaths
         </Typography>
-        <Typography variant="h5" component="h2">
-          be{bull}nev{bull}o{bull}lent
+        <Typography variant="h4" component="p">
+          10101010
         </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          adjective
+        <Typography className={classes.pos} color="textSecondary" component="p">
+          +60 per today (new)
         </Typography>
         <Typography variant="body2" component="p">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          well meaning and kindly well
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </CardContainer>
   );
 };

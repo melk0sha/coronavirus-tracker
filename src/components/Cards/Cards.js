@@ -5,6 +5,8 @@ import Card from "../Card";
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
+    justifyContent: "center",
+    marginTop: "100px",
   },
 });
 
@@ -12,16 +14,12 @@ const Cards = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.root} justify="center" spacing={10}>
-      {/* <Grid item xs={12}> */}
-      {/* <Grid container justify="center" spacing={10}> */}
+    <Grid container className={classes.root} spacing={10}>
       {[0, 1, 2].map((value) => (
         <Grid key={value} item>
           <Card />
         </Grid>
       ))}
-      {/* </Grid> */}
-      {/* </Grid> */}
     </Grid>
   );
 };
